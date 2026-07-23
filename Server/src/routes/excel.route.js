@@ -25,6 +25,8 @@ const upload = multer({
 
 // POST /api/excel  (form-data, field name: "file")
 router.post("/excel", upload.single("file"), importExcel);
+
+// get /api/data/123 to get data according toh fetched data
 router.get("/data/:id", getHierarchy);
 
 module.exports = router;

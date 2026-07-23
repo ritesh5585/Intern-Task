@@ -22,7 +22,7 @@ async function login(req, res) {
 
     return res.status(200).json({
       success: true,
-      token: result.token,
+    //   token: result.token,
       user: result.user, // { id, level, customId, name }
     });
   } catch (err) {
