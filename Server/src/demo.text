@@ -1,0 +1,618 @@
+{
+  "success": true,
+  "level": "TLM",
+  "data": {
+    "_id": "6a60a7ceae4bf63d852509ee",
+    "TlmId": "E15469",
+    "TlmName": "NITU MANI SARMA",
+    "Password": "E15469",
+    "HQ": "E15469",
+    "slms": [
+      {
+        "_id": "6a60a7ceae4bf63d852509ef",
+        "SlmId": "E10417",
+        "SlmName": "INDRAJIT PAUL",
+        "Password": "E10417",
+        "HQ": "",
+        "Region": "",
+        "tlm": "6a60a7ceae4bf63d852509ee",
+        "flms": [
+          {
+            "_id": "6a60a7ceae4bf63d852509f0",
+            "FlmId": "E69224",
+            "FlmName": "BIKASH BARMAN",
+            "Password": "E69224",
+            "HQ": "",
+            "Region": "",
+            "slm": "6a60a7ceae4bf63d852509ef",
+            "mrs": [
+              {
+                "_id": "6a60a7ceae4bf63d852509f1",
+                "MrId": "E79222",
+                "MrName": "DHIRAJ BORAH",
+                "Password": "E79222",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7ceae4bf63d852509f0",
+                "createdAt": "2026-07-22T11:21:50.463Z",
+                "updatedAt": "2026-07-22T11:21:50.463Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7ceae4bf63d852509f2",
+                "MrId": "E82948",
+                "MrName": "ABHIJEET CHANDA",
+                "Password": "E82948",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7ceae4bf63d852509f0",
+                "createdAt": "2026-07-22T11:21:50.554Z",
+                "updatedAt": "2026-07-22T11:21:50.554Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7ceae4bf63d852509f3",
+                "MrId": "E93479",
+                "MrName": "SUMIT DAS",
+                "Password": "E93479",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7ceae4bf63d852509f0",
+                "createdAt": "2026-07-22T11:21:50.625Z",
+                "updatedAt": "2026-07-22T11:21:50.625Z",
+                "__v": 0
+              }
+            ],
+            "createdAt": "2026-07-22T11:21:50.405Z",
+            "updatedAt": "2026-07-22T11:21:50.639Z",
+            "__v": 0
+          },
+          {
+            "_id": "6a60a7ceae4bf63d852509f4",
+            "FlmId": "E36396",
+            "FlmName": "BHASKAR JYOTI SHILL",
+            "Password": "E36396",
+            "HQ": "",
+            "Region": "",
+            "slm": "6a60a7ceae4bf63d852509ef",
+            "mrs": [
+              {
+                "_id": "6a60a7ceae4bf63d852509f5",
+                "MrId": "E95427",
+                "MrName": "DWIPEN KALITA",
+                "Password": "E95427",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7ceae4bf63d852509f4",
+                "createdAt": "2026-07-22T11:21:50.729Z",
+                "updatedAt": "2026-07-22T11:21:50.729Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7ceae4bf63d852509f6",
+                "MrId": "E97251",
+                "MrName": "LAISHRAM MEGHACHANDRA",
+                "Password": "E97251",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7ceae4bf63d852509f4",
+                "createdAt": "2026-07-22T11:21:50.798Z",
+                "updatedAt": "2026-07-22T11:21:50.798Z",
+                "__v": 0
+              }
+            ],
+            "createdAt": "2026-07-22T11:21:50.691Z",
+            "updatedAt": "2026-07-22T11:21:50.814Z",
+            "__v": 0
+          },
+          {
+            "_id": "6a60a7ceae4bf63d852509f7",
+            "FlmId": "E19202",
+            "FlmName": "BISWADEEP DAS",
+            "Password": "E19202",
+            "HQ": "",
+            "Region": "",
+            "slm": "6a60a7ceae4bf63d852509ef",
+            "mrs": [
+              {
+                "_id": "6a60a7ceae4bf63d852509f8",
+                "MrId": "E80332",
+                "MrName": "AMIT DAS",
+                "Password": "E80332",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7ceae4bf63d852509f7",
+                "createdAt": "2026-07-22T11:21:50.891Z",
+                "updatedAt": "2026-07-22T11:21:50.891Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7ceae4bf63d852509f9",
+                "MrId": "E84012",
+                "MrName": "RANAJOY BHADRA",
+                "Password": "E84012",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7ceae4bf63d852509f7",
+                "createdAt": "2026-07-22T11:21:50.960Z",
+                "updatedAt": "2026-07-22T11:21:50.960Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7cfae4bf63d852509fa",
+                "MrId": "E89155",
+                "MrName": "LAKHU NATH",
+                "Password": "E89155",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7ceae4bf63d852509f7",
+                "createdAt": "2026-07-22T11:21:51.021Z",
+                "updatedAt": "2026-07-22T11:21:51.021Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7cfae4bf63d852509fb",
+                "MrId": "E93673",
+                "MrName": "NABIN PAUL",
+                "Password": "E93673",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7ceae4bf63d852509f7",
+                "createdAt": "2026-07-22T11:21:51.080Z",
+                "updatedAt": "2026-07-22T11:21:51.080Z",
+                "__v": 0
+              }
+            ],
+            "createdAt": "2026-07-22T11:21:50.858Z",
+            "updatedAt": "2026-07-22T11:21:51.090Z",
+            "__v": 0
+          },
+          {
+            "_id": "6a60a7cfae4bf63d852509fc",
+            "FlmId": "E61871",
+            "FlmName": "MAKIBUL ISLAM",
+            "Password": "E61871",
+            "HQ": "",
+            "Region": "",
+            "slm": "6a60a7ceae4bf63d852509ef",
+            "mrs": [
+              {
+                "_id": "6a60a7cfae4bf63d852509fd",
+                "MrId": "E94721",
+                "MrName": "BHASKAR SARKAR",
+                "Password": "E94721",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7cfae4bf63d852509fc",
+                "createdAt": "2026-07-22T11:21:51.170Z",
+                "updatedAt": "2026-07-22T11:21:51.170Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7cfae4bf63d852509fe",
+                "MrId": "E79217",
+                "MrName": "JAHEDUL ISLAM",
+                "Password": "E79217",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7cfae4bf63d852509fc",
+                "createdAt": "2026-07-22T11:21:51.227Z",
+                "updatedAt": "2026-07-22T11:21:51.227Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7cfae4bf63d852509ff",
+                "MrId": "E89808",
+                "MrName": "SUMIT MISHRA",
+                "Password": "E89808",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7cfae4bf63d852509fc",
+                "createdAt": "2026-07-22T11:21:51.282Z",
+                "updatedAt": "2026-07-22T11:21:51.282Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7cfae4bf63d85250a00",
+                "MrId": "E93655",
+                "MrName": "SUBHADEEP KUMAR SAHA",
+                "Password": "E93655",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7cfae4bf63d852509fc",
+                "createdAt": "2026-07-22T11:21:51.339Z",
+                "updatedAt": "2026-07-22T11:21:51.339Z",
+                "__v": 0
+              }
+            ],
+            "createdAt": "2026-07-22T11:21:51.129Z",
+            "updatedAt": "2026-07-22T11:21:51.350Z",
+            "__v": 0
+          }
+        ],
+        "createdAt": "2026-07-22T11:21:50.349Z",
+        "updatedAt": "2026-07-22T11:21:51.141Z",
+        "__v": 0
+      },
+      {
+        "_id": "6a60a7cfae4bf63d85250a01",
+        "SlmId": "E24668",
+        "SlmName": "SOURAV BISWAS",
+        "Password": "E24668",
+        "HQ": "",
+        "Region": "",
+        "tlm": "6a60a7ceae4bf63d852509ee",
+        "flms": [
+          {
+            "_id": "6a60a7cfae4bf63d85250a02",
+            "FlmId": "E11687",
+            "FlmName": "SOMNATH DUTTA",
+            "Password": "E11687",
+            "HQ": "",
+            "Region": "",
+            "slm": "6a60a7cfae4bf63d85250a01",
+            "mrs": [
+              {
+                "_id": "6a60a7cfae4bf63d85250a03",
+                "MrId": "E89572",
+                "MrName": "DEBOJIT BARUA",
+                "Password": "E89572",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7cfae4bf63d85250a02",
+                "createdAt": "2026-07-22T11:21:51.440Z",
+                "updatedAt": "2026-07-22T11:21:51.440Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7cfae4bf63d85250a04",
+                "MrId": "E84100",
+                "MrName": "SUMIT ADHYA",
+                "Password": "E84100",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7cfae4bf63d85250a02",
+                "createdAt": "2026-07-22T11:21:51.496Z",
+                "updatedAt": "2026-07-22T11:21:51.496Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7cfae4bf63d85250a05",
+                "MrId": "E66670",
+                "MrName": "NABYENDU DHAR",
+                "Password": "E66670",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7cfae4bf63d85250a02",
+                "createdAt": "2026-07-22T11:21:51.558Z",
+                "updatedAt": "2026-07-22T11:21:51.558Z",
+                "__v": 0
+              }
+            ],
+            "createdAt": "2026-07-22T11:21:51.410Z",
+            "updatedAt": "2026-07-22T11:21:51.569Z",
+            "__v": 0
+          },
+          {
+            "_id": "6a60a7cfae4bf63d85250a06",
+            "FlmId": "E30455",
+            "FlmName": "AMIYA PAUL",
+            "Password": "E30455",
+            "HQ": "",
+            "Region": "",
+            "slm": "6a60a7cfae4bf63d85250a01",
+            "mrs": [
+              {
+                "_id": "6a60a7cfae4bf63d85250a07",
+                "MrId": "E89565",
+                "MrName": "DEPANKAR HALDAR",
+                "Password": "E89565",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7cfae4bf63d85250a06",
+                "createdAt": "2026-07-22T11:21:51.645Z",
+                "updatedAt": "2026-07-22T11:21:51.645Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7cfae4bf63d85250a08",
+                "MrId": "E96082",
+                "MrName": "SURAJIT DAS",
+                "Password": "E96082",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7cfae4bf63d85250a06",
+                "createdAt": "2026-07-22T11:21:51.710Z",
+                "updatedAt": "2026-07-22T11:21:51.710Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7cfae4bf63d85250a09",
+                "MrId": "E89158",
+                "MrName": "PRANTIK SHARMA",
+                "Password": "E89158",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7cfae4bf63d85250a06",
+                "createdAt": "2026-07-22T11:21:51.767Z",
+                "updatedAt": "2026-07-22T11:21:51.767Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7cfae4bf63d85250a0a",
+                "MrId": "E94519",
+                "MrName": "PRASUN CHATTERJEE",
+                "Password": "E94519",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7cfae4bf63d85250a06",
+                "createdAt": "2026-07-22T11:21:51.825Z",
+                "updatedAt": "2026-07-22T11:21:51.825Z",
+                "__v": 0
+              }
+            ],
+            "createdAt": "2026-07-22T11:21:51.611Z",
+            "updatedAt": "2026-07-22T11:21:51.836Z",
+            "__v": 0
+          },
+          {
+            "_id": "6a60a7cfae4bf63d85250a0b",
+            "FlmId": "V10000",
+            "FlmName": "VacantFLM",
+            "Password": "V10000",
+            "HQ": "",
+            "Region": "",
+            "slm": "6a60a7cfae4bf63d85250a01",
+            "mrs": [
+              {
+                "_id": "6a60a7cfae4bf63d85250a0c",
+                "MrId": "E10340",
+                "MrName": "BIDYUT BHATTACHARYA",
+                "Password": "E10340",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7cfae4bf63d85250a0b",
+                "createdAt": "2026-07-22T11:21:51.921Z",
+                "updatedAt": "2026-07-22T11:21:51.921Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7cfae4bf63d85250a0d",
+                "MrId": "E94500",
+                "MrName": "SUBHASHIS BHATTACHARJEE",
+                "Password": "E94500",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7cfae4bf63d85250a0b",
+                "createdAt": "2026-07-22T11:21:51.975Z",
+                "updatedAt": "2026-07-22T11:21:51.975Z",
+                "__v": 0
+              }
+            ],
+            "createdAt": "2026-07-22T11:21:51.876Z",
+            "updatedAt": "2026-07-22T11:21:51.986Z",
+            "__v": 0
+          }
+        ],
+        "createdAt": "2026-07-22T11:21:51.379Z",
+        "updatedAt": "2026-07-22T11:21:51.897Z",
+        "__v": 0
+      },
+      {
+        "_id": "6a60a7d0ae4bf63d85250a0e",
+        "SlmId": "E30592",
+        "SlmName": "ARUP KR. ROY MEDHI",
+        "Password": "E30592",
+        "HQ": "",
+        "Region": "",
+        "tlm": "6a60a7ceae4bf63d852509ee",
+        "flms": [
+          {
+            "_id": "6a60a7d0ae4bf63d85250a0f",
+            "FlmId": "V10001",
+            "FlmName": "VacantFLM",
+            "Password": "V10001",
+            "HQ": "",
+            "Region": "",
+            "slm": "6a60a7d0ae4bf63d85250a0e",
+            "mrs": [
+              {
+                "_id": "6a60a7d0ae4bf63d85250a10",
+                "MrId": "E72145",
+                "MrName": "BASUDEV KANGSHABANIK",
+                "Password": "E72145",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7d0ae4bf63d85250a0f",
+                "createdAt": "2026-07-22T11:21:52.094Z",
+                "updatedAt": "2026-07-22T11:21:52.094Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7d0ae4bf63d85250a11",
+                "MrId": "E29725",
+                "MrName": "DEBABRATA DUTTA",
+                "Password": "E29725",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7d0ae4bf63d85250a0f",
+                "createdAt": "2026-07-22T11:21:52.163Z",
+                "updatedAt": "2026-07-22T11:21:52.163Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7d0ae4bf63d85250a12",
+                "MrId": "E79220",
+                "MrName": "SUDIP DAS",
+                "Password": "E79220",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7d0ae4bf63d85250a0f",
+                "createdAt": "2026-07-22T11:21:52.228Z",
+                "updatedAt": "2026-07-22T11:21:52.228Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7d0ae4bf63d85250a13",
+                "MrId": "E93706",
+                "MrName": "ROHIT MANDAL",
+                "Password": "E93706",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7d0ae4bf63d85250a0f",
+                "createdAt": "2026-07-22T11:21:52.285Z",
+                "updatedAt": "2026-07-22T11:21:52.285Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7d0ae4bf63d85250a14",
+                "MrId": "E93463",
+                "MrName": "PEAUSE DEY",
+                "Password": "E93463",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7d0ae4bf63d85250a0f",
+                "createdAt": "2026-07-22T11:21:52.350Z",
+                "updatedAt": "2026-07-22T11:21:52.350Z",
+                "__v": 0
+              }
+            ],
+            "createdAt": "2026-07-22T11:21:52.061Z",
+            "updatedAt": "2026-07-22T11:21:52.364Z",
+            "__v": 0
+          },
+          {
+            "_id": "6a60a7d0ae4bf63d85250a15",
+            "FlmId": "E18684",
+            "FlmName": "PINKU GHOSH",
+            "Password": "E18684",
+            "HQ": "",
+            "Region": "",
+            "slm": "6a60a7d0ae4bf63d85250a0e",
+            "mrs": [
+              {
+                "_id": "6a60a7d0ae4bf63d85250a16",
+                "MrId": "E89813",
+                "MrName": "RUPAM GHOSH",
+                "Password": "E89813",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7d0ae4bf63d85250a15",
+                "createdAt": "2026-07-22T11:21:52.440Z",
+                "updatedAt": "2026-07-22T11:21:52.440Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7d0ae4bf63d85250a17",
+                "MrId": "E93941",
+                "MrName": "ANKUSH DAS",
+                "Password": "E93941",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7d0ae4bf63d85250a15",
+                "createdAt": "2026-07-22T11:21:52.495Z",
+                "updatedAt": "2026-07-22T11:21:52.495Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7d0ae4bf63d85250a18",
+                "MrId": "E89171",
+                "MrName": "DHRUBA JYOTI DUTTA",
+                "Password": "E89171",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7d0ae4bf63d85250a15",
+                "createdAt": "2026-07-22T11:21:52.553Z",
+                "updatedAt": "2026-07-22T11:21:52.553Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7d0ae4bf63d85250a19",
+                "MrId": "E75058",
+                "MrName": "TAPASH BANERJEE",
+                "Password": "E75058",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7d0ae4bf63d85250a15",
+                "createdAt": "2026-07-22T11:21:52.610Z",
+                "updatedAt": "2026-07-22T11:21:52.610Z",
+                "__v": 0
+              }
+            ],
+            "createdAt": "2026-07-22T11:21:52.404Z",
+            "updatedAt": "2026-07-22T11:21:52.622Z",
+            "__v": 0
+          },
+          {
+            "_id": "6a60a7d0ae4bf63d85250a1a",
+            "FlmId": "V10002",
+            "FlmName": "VacantFLM",
+            "Password": "V10002",
+            "HQ": "",
+            "Region": "",
+            "slm": "6a60a7d0ae4bf63d85250a0e",
+            "mrs": [
+              {
+                "_id": "6a60a7d0ae4bf63d85250a1b",
+                "MrId": "E10360",
+                "MrName": "ACHIN ROY",
+                "Password": "E10360",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7d0ae4bf63d85250a1a",
+                "createdAt": "2026-07-22T11:21:52.689Z",
+                "updatedAt": "2026-07-22T11:21:52.689Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7d0ae4bf63d85250a1c",
+                "MrId": "E81123",
+                "MrName": "ANIRUDDHA CHAKRABORTY",
+                "Password": "E81123",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7d0ae4bf63d85250a1a",
+                "createdAt": "2026-07-22T11:21:52.746Z",
+                "updatedAt": "2026-07-22T11:21:52.746Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7d0ae4bf63d85250a1d",
+                "MrId": "E93379",
+                "MrName": "INDRAJIT DAS",
+                "Password": "E93379",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7d0ae4bf63d85250a1a",
+                "createdAt": "2026-07-22T11:21:52.800Z",
+                "updatedAt": "2026-07-22T11:21:52.800Z",
+                "__v": 0
+              },
+              {
+                "_id": "6a60a7d0ae4bf63d85250a1e",
+                "MrId": "E94025",
+                "MrName": "ATANU DEB",
+                "Password": "E94025",
+                "HQ": "",
+                "Region": "",
+                "flm": "6a60a7d0ae4bf63d85250a1a",
+                "createdAt": "2026-07-22T11:21:52.856Z",
+                "updatedAt": "2026-07-22T11:21:52.856Z",
+                "__v": 0
+              }
+            ],
+            "createdAt": "2026-07-22T11:21:52.655Z",
+            "updatedAt": "2026-07-22T11:21:52.867Z",
+            "__v": 0
+          }
+        ],
+        "createdAt": "2026-07-22T11:21:52.018Z",
+        "updatedAt": "2026-07-22T11:21:52.670Z",
+        "__v": 0
+      }
+    ],
+    "createdAt": "2026-07-22T11:21:50.295Z",
+    "updatedAt": "2026-07-22T11:21:52.037Z",
+    "__v": 0
+  }
+}
