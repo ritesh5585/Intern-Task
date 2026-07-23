@@ -11,15 +11,16 @@ const {
 async function uploadProfilePicture(req, res) {
   try {
     const { id } = req.params;
+    const file = req.file || (req.files && req.files[0]);
 
-    if (!req.file) {
+    if (!file) {
       return res.status(400).json({
         success: false,
         message: "No image file uploaded",
       });
     }
 
-    const updated = await saveProfilePic(id, req.file);
+    const updated = await saveProfilePic(id, file);
 
     if (!updated) {
       return res.status(404).json({
