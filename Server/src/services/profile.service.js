@@ -9,6 +9,7 @@ async function findModelById(id) {
   const results = await Promise.all(
     MODELS.map((Model) => Model.findById(id).select("_id")),
   );
+  console.log("results from all 4 models:", results);
 
   const index = results.findIndex((doc) => doc !== null);
   if (index === -1) return null;
@@ -20,13 +21,16 @@ async function saveProfilePic(id, file) {
   const Model = await findModelById(id);
   if (!Model) return null;
 
-  const relativePath = `/uploads/${file.filename}`;
+  const relativePath = `/uploads/images/${file.filename}`;
+  console.log("Path being saved:", relativePath);
 
   const updated = await Model.findByIdAndUpdate(
     id,
     { profilePic: relativePath },
     { new: true },
-  ).select("_id profilePic");
+  )
+
+  console.log("updated doc:", updated);
 
   return updated;
 }

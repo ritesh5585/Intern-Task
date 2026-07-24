@@ -13,6 +13,9 @@ async function uploadProfilePicture(req, res) {
     const { id } = req.params;
     const file = req.file || (req.files && req.files[0]);
 
+    console.log("req.file:", req.file);
+    console.log("req.params.id:", req.params.id);
+
     if (!file) {
       return res.status(400).json({
         success: false,
@@ -33,7 +36,7 @@ async function uploadProfilePicture(req, res) {
       success: true,
       message: "Profile picture saved",
       userId: updated._id,
-      profilePicUrl: updated.profilePic, // e.g. /uploads/profile-pics/E00235-...jpg
+      profilePicUrl: updated.profilePic, 
     });
   } catch (err) {
     console.error("Profile upload failed:", err);

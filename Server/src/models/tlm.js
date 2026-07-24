@@ -18,6 +18,9 @@ const tlmSchema = new Schema(
     HQ: {
       type: String,
     },
+    profilePic: {
+      type: String,
+    },
     Region: {
       type: String,
     },
