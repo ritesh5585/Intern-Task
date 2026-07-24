@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 const mrSchema = new Schema(
   {
     MrId: {
-      type: String, 
+      type: String,
       required: true,
       index: true,
     },
@@ -15,6 +15,18 @@ const mrSchema = new Schema(
     Password: {
       type: String,
       required: true,
+    },
+    four: {
+      type: Number,
+      default: 0,
+    },
+    six: {
+      type: Number,
+      default: 0,
+    },
+    run: {
+      type: Number,
+      default: 0,
     },
     HQ: {
       type: String,

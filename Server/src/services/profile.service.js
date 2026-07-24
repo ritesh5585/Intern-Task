@@ -28,7 +28,7 @@ async function saveProfilePic(id, file) {
     id,
     { profilePic: relativePath },
     { new: true },
-  )
+  );
 
   console.log("updated doc:", updated);
 

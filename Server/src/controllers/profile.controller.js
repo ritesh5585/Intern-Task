@@ -2,6 +2,7 @@ const {
   saveProfilePic,
   getProfilePic,
 } = require("../services/profile.service");
+const MR = require("../models/mr")
 
 /**
  * POST /api/images/uploads/:id
@@ -36,7 +37,7 @@ async function uploadProfilePicture(req, res) {
       success: true,
       message: "Profile picture saved",
       userId: updated._id,
-      profilePicUrl: updated.profilePic, 
+      profilePicUrl: updated.profilePic,
     });
   } catch (err) {
     console.error("Profile upload failed:", err);
@@ -73,4 +74,59 @@ async function getProfilePicture(req, res) {
   }
 }
 
-module.exports = { uploadProfilePicture, getProfilePicture };
+/**
+ * POST /api/runs/brans/:id
+ */
+async function updateScore(req, res) {
+  try {
+    const { id } = req.params;
+    const { brand } = req.body;
+
+    if (!req.file) {
+      return res
+        .status(400)
+        .json({ success: false, message: "No image file uploaded" });
+    }
+    if (!["A", "B"].includes(brand)) {
+      return res
+        .status(400)
+        .json({ success: false, message: "brand must be A or B" });
+    }
+
+    const mrDoc = await MR.findById(id); 
+
+    if (!mrDoc) {
+      return res
+        .status(404)
+        .json({ success: false, message: `No MR found with id: ${id}` });
+    }
+
+    const points = brand === "A" ? { four: 1, run: 4 } : { six: 1, run: 6 };
+      const relativePath = `/uploads/images/${req.file.filename}`;
+    
+      const updated = await MR.findByIdAndUpdate(
+        id,
+        {
+          profilePic: relativePath, // image bhi save
+          $inc: points, // stats bhi update — same query me dono
+        },
+        { new: true },
+      );
+    
+      return res.status(200).json({
+        success: true,
+        profilePicUrl: updated.profilePic,
+        four: updated.four,
+        six: updated.six,
+        run: updated.run,
+      });
+
+  } catch (err) {
+    console.error("Score update failed:", err);
+    return res
+      .status(500)
+      .json({ success: false, message: "Server error", error: err.message });
+  }
+}
+
+module.exports = { uploadProfilePicture, getProfilePicture, updateScore };
