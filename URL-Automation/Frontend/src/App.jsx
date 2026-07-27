@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import Page from "./features/Page";
 
 const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+  return <Page />;
+};
 
-export default App
+export default App;
