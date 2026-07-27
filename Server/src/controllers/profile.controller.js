@@ -87,6 +87,7 @@ async function updateScore(req, res) {
         .status(400)
         .json({ success: false, message: "No image file uploaded" });
     }
+    
     if (!["A", "B"].includes(brand)) {
       return res
         .status(400)
