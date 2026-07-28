@@ -1,14 +1,19 @@
-import {generateNginxUrl} from "../services/nginx.service.js"
+import { generateNginxUrl } from "../services/nginx.service.js";
 
 export async function generateUrl(req, res) {
   try {
-    const { name, company, video } = req.body;
-
-    const result = await generateNginxUrl({ name, company, video });
+    const { name, company, video, dryRun } = req.body;
+    
+    const result = await generateNginxUrl({
+      name,
+      company,
+      video,
+      dryRun: Boolean(dryRun), // testing phase: send dryRun: true in Postman body
+    });
 
     return res.status(200).json({
       success: true,
-      url: result.url,
+      ...result, // dryRun mode adds templateBlock/newBlock so you can eyeball it before trusting it
     });
   } catch (err) {
     console.error("generateUrl failed:", err.message);
