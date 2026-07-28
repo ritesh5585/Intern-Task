@@ -10,7 +10,7 @@ import {
   buildNewBlock,
 } from "../utils/configParser.util.js";
 
-const CONFIG_PATH = "/etc/nginx/sites-available/digitalerial";
+const CONFIG_PATH = "/etc/nginx/sites-available/digilateral";
 
 const VIDEO_TEMPLATES = {
   "doctorday-demo": "/vikram-entero/doctorday-demo",
