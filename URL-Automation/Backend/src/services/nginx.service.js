@@ -13,25 +13,12 @@ import {
 const CONFIG_PATH = "/etc/nginx/sites-available/digilateral";
 
 const VIDEO_TEMPLATES = {
-  "doctorday-demo": "/vikram-entero/doctorday-demo",
   rxpl: "/preeti-microlabs/rxpl",
-  worldkidneyday: "/heteropharma/debashismajumdar/worldkidneyday",
-  EpilepsySafetyTips: "/heteropharma/debashismajumdar/EpilepsySafetyTips",
   ludoRx3: "/supriya/jagsonpal/ludoRx3",
   soccer: "/divesh/lavue/soccer",
   "RxPL-Demo": "/Solitra/Shreyash/RxPL/Demo",
-  doctorbirthday: "/akash-virbac/doctorbirthday",
   wazzuppapdemo: "/soumalya/indoco/wazzuppapdemo",
   DocTalkQuiz: "/mamiya-sun/DocTalkQuiz",
-  chatbot: "/fdc/ravindra/chatbot",
-  icreateimageguide: "/ankit/seagull/pharma/icreateimageguide",
-  bhagwati1: "/bhagwati/Alkem_Taxim_Injection_22022024",
-  bhagwati2: "/bhagwati/Safety_tips_SunPharma",
-  bhagwati3: "/bhagwati/VIDEO",
-  bhagwati4: "/bhagwati/Birthday_Video_With_Dr",
-  bhagwati5: "/bhagwati/pavan_singham",
-  bhagwati6: "/bhagwati/Rise_AV",
-  bhagwati7: "/bhagwati/tablet_animation",
 };
 
 /**

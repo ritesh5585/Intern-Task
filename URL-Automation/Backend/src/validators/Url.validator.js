@@ -24,6 +24,6 @@ export const generateUrlValidator = [
   body("video")
     .notEmpty()
     .withMessage("Please select a video category")
-    .isIn(["wazzuppapdemo", "otherTemplateId"])
+    .isIn(["wazzuppapdemo", "rxpl", "ludoRx3", "soccer", "RxPL-Demo", "DocTalkQuiz"])
     .withMessage("Invalid video selection"),
 ];
