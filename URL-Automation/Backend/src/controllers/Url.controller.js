@@ -10,7 +10,7 @@ export async function generateUrl(req, res) {
       success: true,
       url: result.url,
     });
-  } catch (error) {
+  } catch (err) {
     console.error("generateUrl failed:", err.message);
     return res.status(500).json({
       success: false,
