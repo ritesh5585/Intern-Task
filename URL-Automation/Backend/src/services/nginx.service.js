@@ -47,7 +47,12 @@ const VIDEO_TEMPLATES = {
  * server at all. Flip dryRun to false once you're confident the
  * generated block looks right.
  */
-async function generateNginxUrl({ name, company, video, dryRun = false }) {
+export async function generateNginxUrl({
+  name,
+  company,
+  video,
+  dryRun = false,
+}) {
   const oldPath = VIDEO_TEMPLATES[video];
   if (!oldPath) {
     throw new Error(`Unknown video template: "${video}"`);
@@ -57,7 +62,7 @@ async function generateNginxUrl({ name, company, video, dryRun = false }) {
   // inconsistent the legacy paths in the config are. This keeps every
   // future generated URL predictable: /{name}-{company}/{videoKey}
   const newPath = `/${slugify(company)}/${slugify(name)}/${video}`;
-  
+
   const conn = await connect();
 
   try {
@@ -107,5 +112,3 @@ async function generateNginxUrl({ name, company, video, dryRun = false }) {
     conn.end(); // always close the connection, whether we succeeded or threw
   }
 }
-
-export { generateNginxUrl };

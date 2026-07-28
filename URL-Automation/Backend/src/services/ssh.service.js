@@ -1,5 +1,4 @@
 import { Client } from "ssh2";
-import fs from "fs";
 
 /**
  * Opens a single SSH connection using credentials from environment
@@ -16,7 +15,7 @@ export function connect() {
       .connect({
         host: process.env.SSH_HOST,
         username: process.env.SSH_USER,
-        privateKey: fs.readFileSync(process.env.SSH_PRIVATE_KEY_PATH),
+        password: process.env.SSH_PASSWORD,
       });
   });
 }
