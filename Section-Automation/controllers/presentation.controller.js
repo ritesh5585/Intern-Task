@@ -1,14 +1,19 @@
 const { updateHtml } = require("../services/html.service");
+const { updateJs } = require("../services/js.service");
 
 exports.updatePresentation = (req, res) => {
   const { section } = req.body;
-
-  if (!section) {
-    return res.status(400).send("Section is required");
-  }
+  if (!section) return res.status(400).send("Section is required");
 
   try {
     updateHtml(section);
+    console.log(`Section "${section}" activated successfully in HTML`);
+
+    const jsUpdated = updateJs(section);
+    if (jsUpdated) {
+      console.log(`Section "${section}" activated successfully in JavaScript`);
+    }
+
     res.send(`Section "${section}" activated successfully`);
   } catch (err) {
     console.error(err);
