@@ -21,19 +21,6 @@ const VIDEO_TEMPLATES = {
   DocTalkQuiz: "/mamiya-sun/DocTalkQuiz",
 };
 
-/**
- * The full automation, start to finish. Takes clean, validated input
- * from the controller and returns the generated URL on success —
- * throws a descriptive Error on any failure, which the controller's
- * try/catch turns into a clean error response.
- *
- * dryRun mode (testing phase): still connects and READS the real
- * config, and still builds the real new block — this is exactly what
- * would be written. It just stops BEFORE the actual write/test/reload,
- * so you can see and verify the output without touching the live
- * server at all. Flip dryRun to false once you're confident the
- * generated block looks right.
- */
 export async function generateNginxUrl({
   name,
   company,
@@ -45,21 +32,16 @@ export async function generateNginxUrl({
     throw new Error(`Unknown video template: "${video}"`);
   }
 
-  // NEW paths always follow ONE fixed convention, regardless of how
-  // inconsistent the legacy paths in the config are. This keeps every
-  // future generated URL predictable: /{name}-{company}/{videoKey}
+  // NEW paths always follow ONE fixed convention
   const newPath = `/${slugify(company)}/${slugify(name)}/${video}`;
 
   const conn = await connect();
 
   try {
-    // 1. read the full current config
     const configText = await readRemoteFile(conn, CONFIG_PATH);
 
-    // 2. find the existing template block for this video (never modified)
     const templateBlock = extractLocationBlock(configText, oldPath);
 
-    // 3. build a brand-new block from the template, with the new path
     const newBlock = buildNewBlock(templateBlock, oldPath, newPath);
 
     const generatedUrl = `${process.env.PUBLIC_DOMAIN}${newPath}`;
@@ -71,24 +53,20 @@ export async function generateNginxUrl({
         url: generatedUrl,
         newPath,
         templateUsed: oldPath,
-        templateBlock, // the original block we read from the server
-        newBlock, // exactly what WOULD be appended, byte for byte
+        templateBlock,
+        newBlock,
       };
     }
 
-    // 4. append the new block to the END of the file — original stays untouched
     const updatedConfigText = `${configText}\n\n${newBlock}\n`;
 
-    // 5. upload the full updated file back over SFTP
     await writeRemoteFile(conn, CONFIG_PATH, updatedConfigText);
 
-    // 6. test syntax BEFORE reloading — never reload blindly
     const testResult = await execCommand(conn, "sudo nginx -t");
     if (testResult.code !== 0) {
       throw new Error(`nginx -t failed: ${testResult.stderr}`);
     }
 
-    // 7. only reload if the test passed
     const reloadResult = await execCommand(conn, "sudo systemctl reload nginx");
     if (reloadResult.code !== 0) {
       throw new Error(`nginx reload failed: ${reloadResult.stderr}`);
@@ -96,6 +74,6 @@ export async function generateNginxUrl({
 
     return { dryRun: false, url: generatedUrl };
   } finally {
-    conn.end(); // always close the connection, whether we succeeded or threw
+    conn.end();
   }
 }

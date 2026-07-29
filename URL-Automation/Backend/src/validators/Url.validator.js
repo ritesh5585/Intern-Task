@@ -16,7 +16,7 @@ export const generateUrlValidator = [
     .trim()
     .notEmpty()
     .withMessage("Name is Required")
-    .isLength({ min: 3 })
+    .isLength({ min: 2 })
     .withMessage("Name must be atleast 3 character"),
 
   body("company").trim().notEmpty().withMessage("Company name is Required"),
@@ -24,6 +24,13 @@ export const generateUrlValidator = [
   body("video")
     .notEmpty()
     .withMessage("Please select a video category")
-    .isIn(["wazzuppapdemo", "rxpl", "ludoRx3", "soccer", "RxPL-Demo", "DocTalkQuiz"])
+    .isIn([
+      "wazzuppapdemo",
+      "rxpl",
+      "ludoRx3",
+      "soccer",
+      "RxPL-Demo",
+      "DocTalkQuiz",
+    ])
     .withMessage("Invalid video selection"),
 ];

@@ -1,0 +1,19 @@
+$kind: http-request
+name: http://localhost:8000/api/generate-url
+description: ""
+url: http://localhost:8000/api/generate-url
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Rahul\",\r
+
+    \  \"company\": \"ABC Pharma\",\r
+
+    \  \"video\": \"wazzuppapdemo\",\r
+
+    \  \"dryRun\": true\r
+
+    }"
+order: 1785245506779

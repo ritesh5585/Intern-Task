@@ -113,7 +113,7 @@ const UrlGeneratorPage = () => {
             </label>
             <select
               // id="video"
-              // name="video"
+              name="video"
               value={form.video}
               onChange={handleChange}
               required
