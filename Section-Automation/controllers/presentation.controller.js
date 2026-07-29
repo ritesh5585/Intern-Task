@@ -14,7 +14,7 @@ exports.updatePresentation = (req, res) => {
       console.log(`Section "${section}" activated successfully in JavaScript`);
     }
 
-    res.send(`Section "${section}" activated successfully`);
+    return res.redirect("/ppt-updated/index.html");
   } catch (err) {
     console.error(err);
     res.status(500).send("Failed to update presentation");

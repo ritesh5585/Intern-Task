@@ -9,6 +9,10 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
+app.use(
+  "/ppt-updated",
+  express.static(path.join(__dirname, "..", "ppt-updated")),
+);
 
 const routes = require("./routes/presentation.routes");
 app.use("/presentation", routes);
