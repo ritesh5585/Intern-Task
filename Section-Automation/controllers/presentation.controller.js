@@ -1,14 +1,17 @@
-const fs = require("fs");
-const path = require("path");
+const { updateHtml } = require("../services/html.service");
 
 exports.updatePresentation = (req, res) => {
   const { section } = req.body;
 
-  const htmlPath = path.join(__dirname, "../../ppt-updated/index.html");
+  if (!section) {
+    return res.status(400).send("Section is required");
+  }
 
-  const html = fs.readFileSync(htmlPath, "utf8");
-  console.log("selected: ", section);
-  console.log("Data connected", html);
-
-  res.send("HTML Loaded Successfully");
+  try {
+    updateHtml(section);
+    res.send(`Section "${section}" activated successfully`);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Failed to update presentation");
+  }
 };
