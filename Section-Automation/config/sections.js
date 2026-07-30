@@ -15,20 +15,8 @@ module.exports = {
     start: "<!-- Persionalized Video creation -->",
     end: "<!-- RxPL -->",
   },
-  rxpl: {
-    start: "<!-- RxPL -->",
-    end: "<!-- websites -->",
-  },
-  websites: {
-    start: "<!-- websites -->",
-    end: "<!--QwiQly QR Generation -->",
-  },
-  qr: {
-    start: "<!--QwiQly QR Generation -->",
-    end: "<!-- Games -->",
-  },
-  games: {
-    start: "<!-- Games -->",
-    end: "</div>",
-  },
+  rxpl: { start: "<!-- RxPL -->", end: "<!-- websites -->" },
+  websites: { start: "<!-- websites -->", end: "<!--QwiQly QR Generation -->" },
+  qr: { start: "<!--QwiQly QR Generation -->", end: "<!-- Games -->" },
+  games: { start: "<!-- Games -->", end: '<div class="box_btn">' },
 };

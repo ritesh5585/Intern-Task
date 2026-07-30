@@ -11,57 +11,22 @@ function writeFile(filePath, content) {
 function extractBlock(content, startMarker, endMarker) {
   const startIndex = content.indexOf(startMarker);
   if (startIndex === -1) return null;
-
   const endIndex = content.indexOf(endMarker, startIndex + startMarker.length);
   if (endIndex === -1) return null;
-
   return content.substring(startIndex + startMarker.length, endIndex);
 }
 
-// ---- HTML comment helpers ----
-function isCommented(block) {
+// Ek hi function HTML (<!-- -->) aur JS (/* */) dono ke liye
+function toggleBlock(block, shouldShow, cStart, cEnd) {
   const trimmed = block.trim();
-  return trimmed.startsWith("<!--") && trimmed.endsWith("-->");
+  const isCommented = trimmed.startsWith(cStart) && trimmed.endsWith(cEnd);
+
+  if (shouldShow) {
+    if (!isCommented) return block; // already visible hai
+    return `\n${trimmed.slice(cStart.length, -cEnd.length).trim()}\n`;
+  }
+  if (isCommented) return block; // already hidden hai
+  return `\n${cStart}\n${trimmed}\n${cEnd}\n`;
 }
 
-function commentBlock(block) {
-  if (isCommented(block)) return block;
-  return `\n<!--\n${block.trim()}\n-->\n`;
-}
-
-function uncommentBlock(block) {
-  let trimmed = block.trim();
-  if (!isCommented(trimmed)) return block;
-  trimmed = trimmed.slice(4, -3);
-  return `\n${trimmed.trim()}\n`;
-}
-
-// ---- JS comment helpers ----
-function isJsCommented(block) {
-  const trimmed = block.trim();
-  return trimmed.startsWith("/*") && trimmed.endsWith("*/");
-}
-
-function jsCommentBlock(block) {
-  if (isJsCommented(block)) return block;
-  return `\n/*\n${block.trim()}\n*/\n`;
-}
-
-function jsUncommentBlock(block) {
-  let trimmed = block.trim();
-  if (!isJsCommented(trimmed)) return block;
-  trimmed = trimmed.slice(2, -2);
-  return `\n${trimmed.trim()}\n`;
-}
-
-module.exports = {
-  readFile,
-  writeFile,
-  extractBlock,
-  isCommented,
-  commentBlock,
-  uncommentBlock,
-  isJsCommented,
-  jsCommentBlock,
-  jsUncommentBlock,
-};
+module.exports = { readFile, writeFile, extractBlock, toggleBlock };
