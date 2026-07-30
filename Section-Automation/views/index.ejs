@@ -1,30 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>PPT Automation</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>digiLATERAL | PPT Automation</title>
+
     <link rel="stylesheet" href="/css/style.css" />
   </head>
 
   <body>
-    <div class="container">
-      <h1>PPT Automation</h1>
-      <form action="/presentation/update" method="POST">
-        <label> Select Section </label>
-        <select name="section">
+    <div class="page">
+      <div class="card">
+        <!-- Header -->
+        <div class="header">
+          <div class="logo">
+            <span class="logo-digi">digi</span
+            ><span class="logo-lateral">LATERAL</span>
+          </div>
 
-          <option value="intro">Introduction</option>
-          <option value="brand">Brand Communication</option>
-          <option value="videos">Videos & Animation</option>
-          <option value="personalized">Personalized Video</option>
-          <option value="rxpl">RxPL</option>
-          <option value="websites">Websites</option>
-          <option value="qr">QR Generation</option>
-          <option value="games">Games</option>
+          <h1>PPT Automation</h1>
 
-        </select>
-        <br /><br />
-        <button>Update PPT</button>
-      </form>
+          <p class="subtitle">
+            Configure your presentation and update the dashboard automatically.
+          </p>
+        </div>
+
+        <!-- Form -->
+        <form action="/presentation/update" method="POST">
+          <!-- User Name -->
+          <div class="form-group">
+            <label for="userName"> User Name </label>
+
+            <input
+              type="text"
+              id="userName"
+              name="userName"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+
+          <!-- Company Name -->
+          <div class="form-group">
+            <label for="companyName"> Company Name </label>
+
+            <input
+              type="text"
+              id="companyName"
+              name="companyName"
+              placeholder="Enter company name"
+              required
+            />
+          </div>
+
+          <!-- Section -->
+          <div class="form-group">
+            <label for="section"> Select Section </label>
+
+            <div class="section-select" id="sectionSelect">
+              <button type="button" class="section-trigger">
+                <span id="sectionText">Select a section</span>
+                <span class="section-arrow">⌄</span>
+              </button>
+
+              <div class="section-options">
+                <button type="button" data-value="intro">Introduction</button>
+                <button type="button" data-value="brand">
+                  Brand Communication
+                </button>
+                <button type="button" data-value="videos">
+                  Videos & Animation
+                </button>
+                <button type="button" data-value="personalized">
+                  Personalized Video
+                </button>
+                <button type="button" data-value="rxpl">RxPL</button>
+                <button type="button" data-value="websites">Websites</button>
+                <button type="button" data-value="qr">QR Generation</button>
+                <button type="button" data-value="games">Games</button>
+              </div>
+
+              <input type="hidden" id="section" name="section" required />
+            </div>
+          </div>
+
+          <!-- Button -->
+          <button type="submit" class="submit-btn">Update Presentation</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>
