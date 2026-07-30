@@ -36,6 +36,6 @@ module.exports = {
   games: {
     start:
       "//------------------------------------------------------------------Games",
-    end: "return content;",
+    end: "// end-games-section",
   },
 };
