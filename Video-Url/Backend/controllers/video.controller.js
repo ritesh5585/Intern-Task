@@ -1,3 +1,20 @@
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+import slugify from "slugify";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const uploadDir = path.join(__dirname, "../uploads");
+
+// Create uploads directory if it doesn't exist
+if (!fs.existsSync(uploadDir)) {
+  fs.mkdirSync(uploadDir, {
+    recursive: true,
+  });
+}
+
 export const uploadVideo = (req, res) => {
   try {
     const { companyName, productName } = req.body;
@@ -7,16 +24,18 @@ export const uploadVideo = (req, res) => {
         message: "Company name, product name and video are required.",
       });
     }
-    const companySlug = slugify(companyName);
-    const productSlug = slugify(productName);
+
+    const companySlug = slugify(companyName, {
+      lower: true,
+      strict: true,
+    });
+
+    const productSlug = slugify(productName, {
+      lower: true,
+      strict: true,
+    });
 
     const downloadUrl = `http://localhost:5173/${companySlug}/${productSlug}`;
-
-    /*
-      Store mapping for now.
-
-      Later we'll make this persistent/database-backed.
-      */
 
     const metadata = {
       companyName,
@@ -34,14 +53,14 @@ export const uploadVideo = (req, res) => {
 
     fs.writeFileSync(metadataFile, JSON.stringify(metadata, null, 2));
 
-    res.json({
+    return res.status(201).json({
       success: true,
       url: downloadUrl,
     });
   } catch (error) {
-    console.error(error);
+    console.error("Upload video error:", error);
 
-    res.status(500).json({
+    return res.status(500).json({
       message: "Upload failed.",
     });
   }
@@ -65,10 +84,10 @@ export const getDownloadUrl = (req, res) => {
       return res.status(404).send("Video file not found.");
     }
 
-    res.download(videoPath, metadata.originalName);
+    return res.download(videoPath, metadata.originalName);
   } catch (error) {
-    console.error(error);
+    console.error("Download video error:", error);
 
-    res.status(500).send("Download failed.");
+    return res.status(500).send("Download failed.");
   }
 };
