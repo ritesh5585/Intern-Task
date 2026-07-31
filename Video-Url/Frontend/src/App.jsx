@@ -147,7 +147,7 @@ const UrlGeneratorPage = () => {
             disabled={loading}
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-lg text-sm disabled:opacity-50"
           >
-            {loading ? "Generating..." : "Generate URL"}
+            {loading ? "Uploading..." : "Upload"}
           </button>
         </form>
       </div>
